@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 
-echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
+echo 'Dotfiles - "@megalithic" Seth Messer'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
 Usage: $(basename "$0")
 
 See the README for documentation.
+https://github.com/megalithic/cowboy-dotfiles
+
+For the original project from whence this fork came:
 https://github.com/cowboy/dotfiles
 
-Copyright (c) 2012 "Cowboy" Ben Alman
-Licensed under the MIT license.
-http://benalman.com/about/license/
+Copyright (c) 2013 "Cowboy" Ben Alman, "@megalithic" Seth Messer
+Originally licensed under the MIT license. (http://benalman.com/about/license/)
 HELP
 exit; fi
 
@@ -152,7 +154,7 @@ if [[ ! -d ~/.dotfiles ]]; then
   new_dotfiles_install=1
   # ~/.dotfiles doesn't exist? Clone it!
   e_header "Downloading dotfiles"
-  git clone --recursive git://github.com/cowboy/dotfiles.git ~/.dotfiles
+  git clone --recursive git://github.com/megalithic/cowboy-dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
 else
   # Make sure we have the latest files.
